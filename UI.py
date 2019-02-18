@@ -30,18 +30,26 @@ def crearMatriz(path):
 
 def archivoA():
     path=askopenfile()
+    txtA.delete("1.0", END)
     path=((str(path).split("'")[1]))
     global arrayA
     arrayA=crearMatriz(path)
-    txtA.insert(INSERT, arrayA)
+    for i in arrayA:
+        print(i)
+        txtA.insert(INSERT, i)
+        txtA.insert(INSERT,"\n")
 
 
 def archivoB():
     path=askopenfile()
+    txtB.delete("1.0",END)
     path = ((str(path).split("'")[1]))
     global arrayB
     arrayB = crearMatriz(path)
-    txtB.insert(INSERT, arrayB)
+    for i in arrayB:
+        print(i)
+        txtB.insert(INSERT, i)
+        txtB.insert(INSERT, "\n")
 
 
 def iniciar():
@@ -70,6 +78,3 @@ txtB.grid(column=3,row=1,padx=5,pady=5)
 #entradaA= open(bA.)
 #txtA.insert(INSERT,entradaA)
 pantalla.mainloop()
-
-
-
