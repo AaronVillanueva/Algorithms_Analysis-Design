@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import *
 from tkinter.filedialog import askopenfile
+import tkinter.scrolledtext as tkText
 
 def matriz():
     tamaño=len(arrayA)
@@ -35,7 +36,7 @@ def archivoA():
     global arrayA
     arrayA=crearMatriz(path)
     for i in arrayA:
-        print(i)
+        #print(i)
         txtA.insert(INSERT, i)
         txtA.insert(INSERT,"\n")
 
@@ -47,7 +48,7 @@ def archivoB():
     global arrayB
     arrayB = crearMatriz(path)
     for i in arrayB:
-        print(i)
+        #print(i)
         txtB.insert(INSERT, i)
         txtB.insert(INSERT, "\n")
 
@@ -55,8 +56,10 @@ def archivoB():
 def iniciar():
     res=matriz()
     ventana=tk.Toplevel(pantalla)
-    txtC=tk.Text(ventana)
-    txtC.pack()
+    txtC=tkText.ScrolledText(ventana)
+    txtD=tkText.ScrolledText(ventana)
+    txtC.grid(column=0,row=0)
+    txtD.grid(column=1,row=0)
     txtC.insert(INSERT,res)
 
 
@@ -67,8 +70,8 @@ pantalla.title("Matrix Multiplication")
 bA=tk.Button(pantalla,text="Archivo A",command=archivoA)
 bB=tk.Button(pantalla,text="Archivo B",command=archivoB)
 bC=tk.Button(pantalla,text="Listo",command=iniciar)
-txtA=tk.Text(pantalla)
-txtB=tk.Text(pantalla)
+txtA=tkText.ScrolledText(pantalla)
+txtB=tkText.ScrolledText(pantalla)
 bA.grid(column=0,row=0,padx=5,pady=15)
 bB.grid(column=3,row=0,padx=5,pady=5)
 bC.grid(column=2,row=2,padx=5,pady=5)
