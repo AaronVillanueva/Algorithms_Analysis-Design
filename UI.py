@@ -81,6 +81,7 @@ def stras():
 
 def nuclear():
     print("reee")
+    install(numpy)
 
 pantalla=tk.Tk()
 pantalla.title("Matrix Multiplication")
