@@ -25,7 +25,15 @@ class Nodo:
         if (self.mayor != None):
             self.mayor.printHorizontal()
     def printVertical(self):
+        lista=[]
+        self.vert(self,lista)
 
+    def vert(self,lista):
+        if(self.menor!=None):
+            self.numero
+            self.menor.vert(self,lista)
+        if (self.mayor != None):
+            self.mayor.vert(self,lista)
 
 arbol=Nodo(x[0],0)
 x.pop(0)
