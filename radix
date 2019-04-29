@@ -1,1 +1,4 @@
-
+def digito(numero,digito):
+  for i in range(digito):
+    numero=numero//10
+  return numero
