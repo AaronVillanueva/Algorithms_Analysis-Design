@@ -1,12 +1,19 @@
 numbers=[10,2,5,8,7]
-print(numbers)
 
 def mergesort(lista):
   tam=len(lista)
   mitad=tam//2
   lista1=lista[:mitad]
   lista2=lista[mitad:]
-  print(lista1)
-  print(lista2)
+  print(lista)
+  #print(lista2)
+  if(tam>2):
+    mergesort(lista1)
+    #mergesort(lista2)
+  else:
+    maxi=max(lista)
+    mini=min(lista)
+    lista=[mini,maxi]
+    print(lista)
 
 mergesort(numbers)
