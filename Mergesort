@@ -1,3 +1,5 @@
+#Autor Jaime Aaron
+
 numbers=[10,2,5,8,7]
 
 def mergesort(lista):
