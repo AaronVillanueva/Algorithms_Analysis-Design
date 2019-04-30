@@ -1,3 +1,4 @@
+#Autor Jaime Aaron
 def radix(lista,index):
   lista0=[]
   lista1=[]
